@@ -1,6 +1,0 @@
-{
-    "/todays-matches/*":{
-        "target":  "https://api.football-data-api.com",
-        "secure":false
-    }
-}
