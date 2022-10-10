@@ -1,0 +1,473 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img src="assets/images/logotipoBlanco.png" alt="" style="height: 70px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"></a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <div class="input-group">
+                <div class="social-networks" style="color: yellow;">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+        </form>
+        <a class="btn text-white" type="submit"><i class="fa-solid fa-circle-user"></i>  Iniciar Sesión</a>
+        <a class="btn text-white" type="submit"><i class="fa-solid fa-bars"></i>  Registrarse</a>
+      </div>
+    </div>
+</nav>
+
+<div class="bg-dark text-secondary px-5 py-5 text-center">
+  <div class="py-5 row">
+    <div class="col-sm-4">
+      <img src="{{principal_data.teams.home.logo}}" alt="">
+      <h2 class="text-center text-white">{{principal_data.teams.home.name}}</h2>
+      <h3>Equipo Local</h3>
+    </div>
+    <div class="col-sm-4">
+      <h4 class="text-muted">{{principal_data.league.country}}</h4>
+      <h4 class="text-muted">{{principal_data.league.name}}</h4>
+      <h4 class="text-muted">{{principal_data.league.round}}</h4>
+    </div>
+    <div class="col-sm-4">
+      <img src="{{principal_data.teams.away.logo}}" alt="">
+      <h2 class="text-center text-white">{{principal_data.teams.away.name}}</h2>
+      <h3>Equipo Visitante</h3>
+    </div>
+  </div>
+</div>
+<br>
+<!--ULTIMOS ENCUENTROS-->
+<div class="container">
+  <h1>ULTIMOS ENCUENTROS</h1>
+  <div class="row border border-dark" *ngFor="let match of lastH2H">
+    <br>
+    <div class="col-sm-4 d-flex align-items-center">
+      <img src="{{match.teams.home.logo}}" alt=""  width="70" height="70">
+      <h5 class="text-center px-5">{{match.teams.home.name}}</h5>
+    </div>
+    <div class="col-sm-4">
+      <h4 class="text-center"><strong>{{match.goals.home}} - {{match.goals.away}}</strong></h4>
+      <h5 class="text-center">{{match.fixture.date | date:"MM/dd/yy"}}</h5>
+    </div>
+    <div class="col-sm-4 d-flex align-items-center">
+      <h5 class="text-center px-5">{{match.teams.away.name}}</h5>
+      <img src="{{match.teams.away.logo}}" alt="" width="70" height="70">
+    </div>
+  </div>
+</div>
+<!--FIN-->
+<!--ESTADISTICAS GENERALES-->
+<br>
+<div class="container">
+  <h1>ESTADISTICAS GENERALES</h1>
+  <div class="d-flex justify-content-around">
+    <div>
+      <div class="d-flex justify-content-center">
+        <img src="{{principal_data.teams.home.logo}}" alt="" width="50px" height="50px">
+        <h2 class="text-center">{{principal_data.teams.home.name}}</h2>
+      </div>
+      <table class="table">
+        <thead>
+          <tr class="bg-dark text-white">
+            <th scope="col"></th>
+            <th scope="col">LOCAL</th>
+            <th scope="col">VISITANTE</th>
+            <th scope="col">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>PARTIDO JUGADOS</th>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.played.home}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.played.away}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.played.total}}</h5></td>
+          </tr>
+          <tr>
+            <th>GANADOS</th>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.wins.home}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.wins.away}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.wins.total}}</h5></td>
+          </tr>
+          <tr>
+            <th>EMPATADOS</th>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.draws.home}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.draws.away}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.draws.total}}</h5></td>
+          </tr>
+          <tr>
+            <th>PERDIDOS</th>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.loses.home}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.loses.away}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.fixtures.loses.total}}</h5></td>
+          </tr>
+          <tr class="bg-dark text-white">
+            <th scope="col">GOLES</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+          <tr>
+            <th>A FAVOR</th>
+            <td><h5 class="text-center">{{homeStadistics.goals.against.total.home}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.goals.against.total.away}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.goals.against.total.total}}</h5></td>
+          </tr>
+          <tr>
+            <th>EN CONTRA</th>
+            <td><h5 class="text-center">{{homeStadistics.goals.for.total.home}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.goals.for.total.away}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.goals.for.total.total}}</h5></td>
+          </tr>
+          <tr class="bg-dark text-white">
+            <th scope="col">PROMEDIO GOLES</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+          <tr>
+            <th>A FAVOR</th>
+            <td><h5 class="text-center">{{homeStadistics.goals.against.average.home}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.goals.against.average.away}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.goals.against.average.total}}</h5></td>
+          </tr>
+          <tr>
+            <th>EN CONTRA</th>
+            <td><h5 class="text-center">{{homeStadistics.goals.for.average.home}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.goals.for.average.away}}</h5></td>
+            <td><h5 class="text-center">{{homeStadistics.goals.for.average.total}}</h5></td>
+          </tr>
+          <tr class="bg-dark text-white">
+            <th scope="col">CLEAN SHEETS</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th><h5 class="text-center">{{homeStadistics.clean_sheet.home}}</h5></th>
+            <th><h5 class="text-center">{{homeStadistics.clean_sheet.away}}</h5></th>
+            <th><h5 class="text-center">{{homeStadistics.clean_sheet.total}}</h5></th>
+          </tr>
+          <tr class="bg-dark text-white">
+            <th scope="col">FAILED TO SCORE</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th><h5 class="text-center">{{homeStadistics.failed_to_score.home}}</h5></th>
+            <th><h5 class="text-center">{{homeStadistics.failed_to_score.away}}</h5></th>
+            <th><h5 class="text-center">{{homeStadistics.failed_to_score.total}}</h5></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="d-flex justify-content-center">
+        <img src="{{principal_data.teams.away.logo}}" alt=""  width="50px" height="50px">
+        <h2 class="text-center">{{principal_data.teams.away.name}}</h2>
+      </div>
+      <table class="table p-5">
+        <thead>
+          <tr class="bg-dark text-white">
+            <th scope="col"></th>
+            <th scope="col">LOCAL</th>
+            <th scope="col">VISITANTE</th>
+            <th scope="col">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>PARTIDO JUGADOS</th>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.played.home}}</h5></td>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.played.away}}</h5></td>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.played.total}}</h5></td>
+          </tr>
+          <tr>
+            <th>GANADOS</th>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.wins.home}}</h5></td>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.wins.away}}</h5></td>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.wins.total}}</h5></td>
+          </tr>
+          <tr>
+            <th>EMPATADOS</th>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.draws.home}}</h5></td>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.draws.away}}</h5></td>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.draws.total}}</h5></td>
+          </tr>
+          <tr>
+            <th>PERDIDOS</th>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.loses.home}}</h5></td>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.loses.away}}</h5></td>
+            <td><h5 class="text-center">{{awayStadistics.fixtures.loses.total}}</h5></td>
+          </tr>
+        <tr class="bg-dark text-white">
+          <th scope="col">GOLES</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        <tr>
+          <th>A FAVOR</th>
+          <td><h5 class="text-center">{{awayStadistics.goals.against.total.home}}</h5></td>
+          <td><h5 class="text-center">{{awayStadistics.goals.against.total.away}}</h5></td>
+          <td><h5 class="text-center">{{awayStadistics.goals.against.total.total}}</h5></td>
+        </tr>
+        <tr>
+          <th>EN CONTRA</th>
+          <td><h5 class="text-center">{{awayStadistics.goals.for.total.home}}</h5></td>
+          <td><h5 class="text-center">{{awayStadistics.goals.for.total.away}}</h5></td>
+          <td><h5 class="text-center">{{awayStadistics.goals.for.total.total}}</h5></td>
+        </tr>
+        <tr class="bg-dark text-white">
+          <th scope="col">PROMEDIO GOLES</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        <tr>
+          <th>A FAVOR</th>
+          <td><h5 class="text-center">{{awayStadistics.goals.against.average.home}}</h5></td>
+          <td><h5 class="text-center">{{awayStadistics.goals.against.average.away}}</h5></td>
+          <td><h5 class="text-center">{{awayStadistics.goals.against.average.total}}</h5></td>
+        </tr>
+        <tr>
+          <th>EN CONTRA</th>
+          <td><h5 class="text-center">{{awayStadistics.goals.for.average.home}}</h5></td>
+          <td><h5 class="text-center">{{awayStadistics.goals.for.average.away}}</h5></td>
+          <td><h5 class="text-center">{{awayStadistics.goals.for.average.total}}</h5></td>
+        </tr>
+        <tr class="bg-dark text-white">
+          <th scope="col">CLEAN SHEETS</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th><h5 class="text-center">{{awayStadistics.clean_sheet.home}}</h5></th>
+          <th><h5 class="text-center">{{awayStadistics.clean_sheet.away}}</h5></th>
+          <th><h5 class="text-center">{{awayStadistics.clean_sheet.total}}</h5></th>
+        </tr>
+        <tr class="bg-dark text-white">
+          <th scope="col">FAILED TO SCORE</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th><h5 class="text-center">{{awayStadistics.failed_to_score.home}}</h5></th>
+          <th><h5 class="text-center">{{awayStadistics.failed_to_score.away}}</h5></th>
+          <th><h5 class="text-center">{{awayStadistics.failed_to_score.total}}</h5></th>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h1>PENALTIS</h1>
+  <div class="d-flex justify-content-around">
+    <div>
+      <div class="d-flex justify-content-center">
+        <img src="{{principal_data.teams.home.logo}}" alt="" width="50px" height="50px">
+        <h2 class="text-center">{{principal_data.teams.home.name}}</h2>
+      </div>
+      <table class="table table-responsive">
+        <thead>
+          <tr class="bg-dark text-white">
+            <th scope="col"></th>
+            <th scope="col">%</th>
+            <th scope="col">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="bg-dark text-white"><h5>ANOTADOS</h5></th>
+            <th><h5>{{homeStadistics.penalty.scored.percentage}}</h5></th>
+            <th><h5>{{homeStadistics.penalty.scored.total}}</h5></th>
+          </tr>
+          <tr>
+            <th class="bg-dark text-white"><h5>FALLADOS</h5></th>
+            <th><h5>{{homeStadistics.penalty.missed.percentage}}</h5></th>
+            <th><h5>{{homeStadistics.penalty.missed.total}}</h5></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="d-flex justify-content-center">
+        <img src="{{principal_data.teams.away.logo}}" alt="" width="50px" height="50px">
+        <h2 class="text-center">{{principal_data.teams.away.name}}</h2>
+      </div>
+      <table class="table table-responsive">
+        <thead>
+          <tr class="bg-dark text-white">
+            <th scope="col"></th>
+            <th scope="col">%</th>
+            <th scope="col">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="bg-dark text-white"><h5>ANOTADOS</h5></th>
+            <th><h5>{{awayStadistics.penalty.scored.percentage}}</h5></th>
+            <th><h5>{{awayStadistics.penalty.scored.total}}</h5></th>
+          </tr>
+          <tr>
+            <th class="bg-dark text-white"><h5>FALLADOS</h5></th>
+            <th><h5>{{awayStadistics.penalty.missed.percentage}}</h5></th>
+            <th><h5>{{awayStadistics.penalty.missed.total}}</h5></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<!--TARJETAS-->
+<br>
+<!--
+<div class="container">
+  <h1>TARJETAS POR MINUTOS {{principal_data.teams.home.name}} </h1>
+  <div class="d-flex">
+    <div class="p-5">
+      <h2>Tarjetas amarillas</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Minuto</th>
+            <th scope="col">TOTAL</th>
+            <th scope="col">PORCENTAJE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of homeStadistics.cards.yellow">
+            <th>0-15</th> 
+            <th>{{item.total}}</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>16-30</th> 
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>31-45</th> 
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>46-60</th> 
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>61-75</th> 
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>76-90</th> 
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>91-105</th> 
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>106-120</th> 
+            <th></th>
+            <th></th>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="p-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Minuto</th>
+            <th scope="col">AMARILLA</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+-->
+<!-- Footer -->
+<footer class="bg-black text-center text-white">
+      <img src="assets/images/footerimage.jpg" alt="" class="img-responsive w-100">
+      <!-- Grid container -->
+      <!-- ESTAS SON PARA IR DESPLEGANDO A MEDIDA QUE SE VA HACIENDO EL PROGRAMA
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-sm">
+           <h4><strong>Atención al usuario</strong></h4>
+          </div>
+          <div class="col-sm">
+            <h4><strong>Atención al usuario</strong></h4>
+          </div>
+          <div class="col-sm">
+            <h4><strong>Atención al usuario</strong></h4>
+          </div>
+        </div>
+      </div>
+      -->
+      <div class="container p-5">
+        <h4 class="text-warning">ADVERTENCIA</h4><h5 class="font-weight-normal">No somos responsables de los resultados deportivos, es responsabilidad del
+          Usuario tomar las medidas adecuadas para verificar esta información antes de usarla o
+          actuar en consecuencia y bajo su propio riesgo, por tal razón no hay ninguna garantía de
+          que vaya a ganar dinero utilizando las técnicas e información suministrada en nuestro sitio
+          web.
+        </h5>
+        <div class="mx-auto p-5">
+          <h5>Invierta con responsabilidad</h5>
+          <hr>
+          <img src="assets/images/logotipoBlanco.png" alt="" width="300">
+          <section class="mb-4">
+  
+            <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-youtube"></i
+            ></a>
+  
+            <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+  
+            <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+  
+            <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          </section>
+      
+        </div>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.2);">
+        Sportips.com es una marca registrada de Mavive SAS - © 2022 Todos los derechos reservados. – Sportips.com®
+      </div>
+</footer>
+

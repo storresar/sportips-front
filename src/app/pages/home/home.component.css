@@ -1,0 +1,354 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  font-family: 'Montserrat';
+}
+  
+img {vertical-align: middle;}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next, .prev2, .next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    border-radius: 3px 0 0 3px;
+  }
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #fbcb09;
+  color: black;
+}
+
+/* Position the "next button" to the right */
+.next2 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev2 {
+    border-radius: 3px 0 0 3px;
+  }
+
+/* On hover, add a grey background color */
+.prev2:hover, .next2:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+.login{
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(112,104,85,1) 100%);
+}
+.events{
+    padding: 5%;
+}
+.event-card{
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    color:black;
+}
+
+.event-card h3{
+    font-family: Arial Black;
+}
+
+.event-card img{
+    width: 100%;
+}
+#info-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body,html{
+  height: 100%;
+}
+*{
+  margin: 0;
+}
+.restrict{
+  background-color:black;
+  color:white;
+  text-align:center;
+  font-family:Arial; 
+  font-size: small;
+}
+
+
+header{
+  background-color: #323228;
+  padding: 10px;
+  display: flex;
+  justify-content:space-between;
+}
+
+/* Modify the background color */
+       
+.navbar-custom {
+  background-color: black;
+  font-size: 20px;
+}
+/* Modify brand and text color */
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text .nav-link{
+  color: white;
+}
+
+
+#logo{
+  margin-left: 50px;
+}
+.subheader{
+  display: flex;
+  justify-content:space-between;
+  background-color:black;
+}
+.subheader .menu ul{
+  list-style: none;
+  overflow: hidden; 
+}
+.subheader .menu ul li{
+  float: left;
+}
+.subheader .menu ul li a{
+  display: block; 
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+.social-networks{
+  padding: 20px;
+}
+.social-networks a{
+  padding: 7px;
+  color: white;
+}
+.information{
+  padding: 3%;
+  background-color:#ebebeb;
+}
+#info-title{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.information-card{
+  background-color: rgba(219, 219, 219, 0.397);
+  padding: 15px;
+  font-family: Calibri;
+  font-size: 20px;
+}
+.information-card h1{
+  text-align: center;
+  background-color: #fbcb09;
+  font-family: Arial Black;
+  padding: 5px;
+  font-size: 30px;
+}
+
+
+.information-card p{
+  padding-top: 15px;
+  text-align: justify;
+}
+.best-tipsters-image{
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://img.freepik.com/vector-premium/trazos-pincel-sobre-fondo-amarillo_97458-264.jpg?w=2000");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.best-tipsters-content{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto;
+}
+.tipster-card{
+  background-color: #38311f;    ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  color:white;
+}
+.tipster-card hr{
+  align-content: center;
+  width:50%;
+  margin: auto;
+}
+.tipster-card img{
+  width: 100%;
+}
+.tipster-card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #38311f;
+  background-color: #c7b897;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.events{
+  padding: 5%;
+}
+.event-card{
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  color:black;
+}
+
+.event-card h3{
+  font-family: Arial Black;
+}
+
+.event-card img{
+  width: 100%;
+}
+.data{
+  background-color:#f2f2f2; 
+  padding:5%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto;
+}
+.last-forecast{
+  display: grid;
+  gap: 10px;
+}
+.forecast{
+  display: flex;
+  background-color: white;
+  align-items: center;
+}
+.forecast img{
+  object-fit: cover;
+  margin-left: 10px;
+  border: 25%;
+  width: 65px;
+  height: 65px;
+}
+.forecast-detail{
+  padding: 10px;
+}
+
+.blog-card{
+  background-color: #f2f2f2;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  color:black;
+}
+.blog-card img{
+  width: 100%;
+}
+.blog-card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: #fbcb09;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.avatar {
+  position: absolute;
+  top: 50px;
+  left: 30%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+
+.card-img-top{
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+
+#cuenta {
+display: flex;
+justify-content: center;
+}
+
+.simply-section {
+  color: white;
+background: black;
+width: 100px;
+height: 120px;
+margin: 0 5px;
+border-radius: 5px;
+justify-content: center;
+  text-align: center;
+}
+
+.simply-amount {
+display: block;
+font-size: 50px;
+font-weight: 700;
+}
+
+.simply-word {
+font-weight: 300;
+font-size: 20px;
+}
+.bgimage {
+  width:100%;
+  height:400px;
+  background: url('src/assets/images/Lanzamiento.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+}
+.bgimage h5 {
+  color:white;
+  text-shadow:2px 2px #333;
+}
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src\assets\images\Pronostico.jpg");
+  height: 100%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

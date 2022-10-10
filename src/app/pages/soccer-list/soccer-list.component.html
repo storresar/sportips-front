@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+
+
+<div>
+    <div class="p-5">
+        <h1>LISTA DE PARTIDOS (Hoy)</h1>
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>EQUIPO LOCAL</th>
+                    <th>EQUIPO VISITANTE</th>
+                    <th>LIGA</th>
+                    <th>PAIS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of matches;let indice=index"  [routerLink]="['/stadistics',item.fixture.id]">
+                    <th>{{indice+1}}</th>
+                    <th>
+                        <img src="{{item.teams.home.logo}}" alt="" height="50px" width="50px">
+                        {{item.teams.home.name}}
+                    </th>
+                    <th>
+                        <img src="{{item.teams.away.logo}}" alt="" height="50px" width="50px">
+                        {{item.teams.away.name}}
+                    </th>
+                    <th>
+                        {{item.league.name}}
+                    </th>
+                    <th>
+                        {{item.league.country}}
+                    </th>
+                </tr>
+    
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
