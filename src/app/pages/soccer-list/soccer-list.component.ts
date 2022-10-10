@@ -12,9 +12,6 @@ export class SoccerListComponent implements OnInit {
   matches:any[]=[];
 
   constructor(public soccerService: SoccerService) {
-   }
-
-  ngOnInit(): void {
     if(this.soccerService.matches) {
       this.matches = this.soccerService.matches;
     }else{
@@ -26,6 +23,9 @@ export class SoccerListComponent implements OnInit {
         console.log(this.matches);
       })
     }
+   }
+
+  ngOnInit(): void {
   }
 
 }
