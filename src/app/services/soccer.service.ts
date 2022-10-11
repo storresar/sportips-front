@@ -56,6 +56,14 @@ export class SoccerService {
     }
     return this.http.get(finalURL,{headers}).toPromise()
   }
+  getPredictions(match:any){
+    const finalURL = this.url +'/predictions?fixture='+match;
+    const headers ={
+      'x-rapidapi-host' : 'v3.football.api-sports.io',
+      'x-rapidapi-key' : '8ab53d4980e115be6053b158622dba48'
+    }
+    return this.http.get(finalURL,{headers}).toPromise()
+  }
 
   formatDate() {
     var d = new Date(),

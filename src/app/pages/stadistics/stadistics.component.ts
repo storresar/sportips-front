@@ -16,6 +16,7 @@ export class StadisticsComponent implements OnInit {
   lastH2H: any[]=[];
   homeStadistics: any;
   awayStadistics: any;
+  predictions: any;
   constructor(
     private _router: Router,
     private _route: ActivatedRoute,
@@ -28,11 +29,11 @@ export class StadisticsComponent implements OnInit {
       this.soccerService.getMatch(params['id']).then(data => {
         this.principal_data = data;
         this.principal_data = this.principal_data['response'][0]
-        this.soccerService.getHead2Head(this.principal_data.teams.home.id,this.principal_data.teams.away.id).then((data) => {
+        /*this.soccerService.getHead2Head(this.principal_data.teams.home.id,this.principal_data.teams.away.id).then((data) => {
           let aux: any;
           aux = data;
-          this.lastH2H = aux['response'];
-        })
+          //this.lastH2H = aux['response'];
+        })*/
         this.soccerService.getTeamStadistics(this.principal_data.league.season,this.principal_data.teams.home.id,this.principal_data.league.id).then((data) => {
           let aux: any;
           aux = data;
@@ -45,7 +46,14 @@ export class StadisticsComponent implements OnInit {
           this.awayStadistics = aux['response'];
         })
         this.soccerService.getStandings(this.principal_data.league.id,this.principal_data.league.season).then((data)=>{
-          console.log(data);
+          //console.table(data);
+        })
+        this.soccerService.getPredictions(params['id']).then((data)=>{
+          console.table(data);
+          let aux: any;
+          aux = data;
+          this.predictions = aux['response'][0];
+          this.lastH2H = this.predictions.h2h
         })
       })
     }
