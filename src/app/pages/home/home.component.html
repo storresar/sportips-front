@@ -34,7 +34,7 @@
     <!--FIN navbar -->
 
 <!--navbar pronosticos-->
-   <nav class="navbar navbar-expand-lg navbar-custom " >
+  <nav class="navbar navbar-expand-lg navbar-custom " >
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -95,7 +95,7 @@
 <!--INFORMACIÓN DE QUE HACEMOS--> 
 <div class="information">
     <h1 id="info-title" class="p-5"><strong>Por qué SporTips?</strong></h1>
-    <div class="grid row row-cols-1 row-cols-md-3 g-4">
+    <div class="grid row row-cols-1 row-cols-md-3 g-4 px-5">
         <div class="col g-col-6 g-col-md-4 ">
             <h1 class="text-center"><img src="assets/icons/Icono1.png" alt="" height="50px" width="50px"></h1>
             <div class="information-card card g-col-6 g-col-md-4 col my-4 bg-white border border-dark" >
@@ -115,7 +115,7 @@
         </div>
         </div>
     </div>
-    <div class="class-infomation grid row row-cols-1 row-cols-md-3 g-4">
+    <div class="class-infomation grid row row-cols-1 row-cols-md-3 g-4 px-5">
       <div class="col g-col-6 g-col-md-4">
         <h1 class="text-center"><img src="assets/icons/Icono4.png" alt="" height="50px" width="50px"></h1>
           <div class="information-card card g-col-6 g-col-md-4 col my-4 bg-white border border-dark" >
@@ -135,7 +135,9 @@
           <p><strong>Te damos consejos e información sobre las mejores cuotas deportivas.</strong></p>
       </div>
       </div>
-  </div>
+    </div>
+    <br>
+    <img src="assets/images/logo2.jpg" alt="" class="img-responsive imagen-gratis">
 </div>
 <!--FIN INFORMACIÓN DE QUE HACEMOS--> 
 
@@ -286,8 +288,11 @@
                 <div class="mySlides1">
                     <div class="events-info grid row row-cols-1 row-cols-md-3 g-4">
                         <div class="event-card col g-col-6 g-col-md-4 p-5"  *ngFor="let match of firsts">
+                            <h3 class="text-muted border font-weight-light">Pronóstico</h3>
+                            <br>
                             <h2>FUTBOL</h2>
                             <img src="assets/images/soccer.jpg" alt="">
+                            <br>
                             <br>
                             <h4>{{match.teams.home.name}}</h4>
                             <h6>VS</h6>
@@ -370,6 +375,46 @@
   </div>
 </div>
 -->
+<div>
+  <div class="row">
+    <div class="col">
+      <h4><strong>Atención al usuario</strong></h4>
+      <br>
+      <ul class="list-footer">
+        <li><a href="">Contacto</a></li>
+        <li><a href="">Terminos y condiciones</a></li>
+        <li><a href="">Politicas de privacidad</a></li>
+        <li><a href="">Preguntas frecuentes</a></li>
+        <li><a href="">Responsabilidad social</a></li>
+        <li><a href="">Politica de cookies</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4><strong>Mapas del sitio</strong></h4>
+      <br>
+      <ul class="list-footer">
+        <li><a href="">Pronosticos</a></li>
+        <li><a href="">Pronosticadores</a></li>
+        <li><a href="">Casas de apuestas</a></li>
+        <li><a href="">Estadisticas</a></li>
+        <li><a href="">Planes y precios</a></li>
+        <li><a href="">Blog y noticias</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4><strong>Academia</strong></h4>
+      <br>
+      <ul class="list-footer">
+        <li><a href="">Glosario</a></li>
+        <li><a href="">Invierte</a></li>
+        <li><a href="">Tipos de apuestas deportivas</a></li>
+        <li><a href="">Baloncesto</a></li>
+        <li><a href="">Tenis</a></li>
+        <li><a href="">Futbol</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 <div class=" p-5">
   <h4 class="text-warning">ADVERTENCIA</h4><h5 class="font-weight-normal">No somos responsables de los resultados deportivos, es responsabilidad del
     Usuario tomar las medidas adecuadas para verificar esta información antes de usarla o
@@ -384,20 +429,16 @@
     <section class="mb-4">
 
       <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-youtube"></i
-      ></a>
+      ><i class="bi bi-youtube"></i></a>
 
       <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
+        ><i class="bi bi-twitter"></i></a>
 
       <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
+        ><i class="bi bi-facebook"></i></a>
 
       <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"
-      ><i class="fab fa-instagram"></i
-    ></a>
+      ><i class="bi bi-instagram"></i></a>
     </section>
 
   </div>
