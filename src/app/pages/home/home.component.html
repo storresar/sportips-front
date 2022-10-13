@@ -3,7 +3,7 @@
 </div>
 
 <!--navbar login-->
-    <nav class="navbar navbar-expand-lg navbar-dark login">
+    <nav class="navbar navbar-expand-lg navbar-dark login header-desktop">
         <div class="container-fluid">
           <img src="assets/images/logotipoBlanco.png" alt="" style="height: 70px;">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
     <!--FIN navbar -->
 
 <!--navbar pronosticos-->
-  <nav class="navbar navbar-expand-lg navbar-custom " >
+  <nav class="navbar navbar-expand-lg navbar-custom header-desktop" >
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -67,13 +67,31 @@
         </div>
     </div>
   </nav>
+
+<!--NAVBAR MOBILE-->
+<div class="topnav">
+  <a href="#home" class="active"><img src="assets/images/logotipoBlanco.png" alt="" style="height: 50px;"></a>
+  <button class="btn btn-warning btn-sm" id="boton"><i class="bi bi-search"></i></button>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" (click)="myFunction()">
+    <i class="bi bi-list"></i>
+  </a>
+</div>
+
 <!--FIN NAVBAR-->   
 <!--IMAGEN DE INICIO-->
 <section class="bgimage">
     <div class="container-fluid  d-flex">
-        <div class="text-left position-absolute top-50 px-5 text-white">
+        <div class="text-left align-middle px-5 text-white">
             <h1><strong>Hogar de los mejores 
             <br>Tipsters Premium verificados</strong></h1>
+            <br>
             <h2 style="font-family: Bookman; font-size: 20px"> 
             Encuentra información y pronósticos deportivos
             <br>
@@ -95,41 +113,40 @@
 <!--INFORMACIÓN DE QUE HACEMOS--> 
 <div class="information">
     <h1 id="info-title" class="p-5"><strong>Por qué SporTips?</strong></h1>
-    <div class="grid row row-cols-1 row-cols-md-3 g-4 px-5">
-        <div class="col g-col-6 g-col-md-4 ">
+    <div class="row row-cols-1 row-cols-md-3 g-4 px-5">
+        <div class="col col-md-4 col-sm-6">
             <h1 class="text-center"><img src="assets/icons/Icono1.png" alt="" height="50px" width="50px"></h1>
             <div class="information-card card g-col-6 g-col-md-4 col my-4 bg-white border border-dark" >
               <p><strong>Encuentra más de 800 pronósticos mensuales.</strong></p>
           </div>
         </div>
-        <div class="g-col-6 g-col-md-4 col">
+        <div class="col col-md-4 col-sm-6">
           <h1 class="text-center"><img src="assets/icons/Icono2.png" alt="" height="50px" width="50px"></h1>
             <div class="information-card card g-col-6 g-col-md-4 col my-4 bg-white border border-dark p-4" >
               <p><strong>Utilizamos plataformas certificadas para que realices tus pagos.</strong></p>
           </div>
         </div>
-        <div class="g-col-6 g-col-md-4 col">
+        <div class="col col-md-4 col-sm-6">
           <h1 class="text-center"><img src="assets/icons/Icono3.png" alt="" height="50px" width="50px"></h1>
           <div class="information-card card g-col-6 g-col-md-4 col my-4 bg-white border border-dark" >
             <p><strong>Todas las estadisticas e información deportiva que necesitas en un solo lugar.</strong></p>
         </div>
         </div>
-    </div>
-    <div class="class-infomation grid row row-cols-1 row-cols-md-3 g-4 px-5">
-      <div class="col g-col-6 g-col-md-4">
+      <div class="w-100"></div>
+      <div class="col col-md-4 col-sm-6">
         <h1 class="text-center"><img src="assets/icons/Icono4.png" alt="" height="50px" width="50px"></h1>
           <div class="information-card card g-col-6 g-col-md-4 col my-4 bg-white border border-dark" >
             <p><strong>Controla la forma en la que recibes tus notificaciones.</strong></p>
         </div>
       </div>
-      <div class="g-col-6 g-col-md-4 col">
+      <div class="col col-md-4 col-sm-6">
         <h1 class="text-center"><img src="assets/icons/Icono5.png" alt="" height="50px" width="50px"></h1>
           <div class="information-card card g-col-6 g-col-md-4 col my-4 bg-white border border-dark" >
             <p><strong>Encuentra todo lo que necesitas saber.</strong></p>
             <br>
         </div>
       </div>
-      <div class="g-col-6 g-col-md-4 col">
+      <div class="col col-md-4 col-sm-6">
         <h1 class="text-center"><img src="assets/icons/Icono6.png" alt="" height="50px" width="50px"></h1>
         <div class="information-card card g-col-6 g-col-md-4 col my-4 bg-white border border-dark">
           <p><strong>Te damos consejos e información sobre las mejores cuotas deportivas.</strong></p>
@@ -137,7 +154,9 @@
       </div>
     </div>
     <br>
-    <img src="assets/images/logo2.jpg" alt="" class="img-responsive imagen-gratis">
+    <div style="width:100%;">
+      <img src="assets/images/logo2.jpg" alt="" class="imagen-gratis" width="100%">
+    </div>
 </div>
 <!--FIN INFORMACIÓN DE QUE HACEMOS--> 
 
@@ -328,6 +347,7 @@
 <div class="p-5">
     <h1 id="info-title"><strong>NUESTRO BLOG</strong></h1>
     <div class="grid row row-cols-1 row-cols-md-3 g-4 p-5">
+      
         <div class="card text-white col g-col-6 g-col-md-4" style="background-color: rgb(231, 231, 231);">
             <img src="https://s03.s3c.es/imag/_v0/770x420/e/0/6/balon-de-futbol.jpg" class="card-img-top" alt="...">
             <div class="card-body text-center">

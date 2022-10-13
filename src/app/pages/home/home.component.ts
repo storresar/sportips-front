@@ -33,5 +33,15 @@ export class HomeComponent implements OnInit {
   goToSoccerList(){
     this.router.navigate(['soccer-list']);
   }
+
+  myFunction() {
+    let aux:any;
+    aux = document.getElementById("myLinks");
+    if (aux.style.display === "block") {
+      aux.style.display = "none";
+    } else {
+      aux.style.display = "block";
+    }
+  }
    
 }
